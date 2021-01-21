@@ -17,3 +17,7 @@ char lireCaractere()
 }
 
 dictionnaire de mot
+dictionnaire = ("dictionnaire.txt" , r )
+if ( dictionnaire != NULL ) { }
+else { printf("erreur") }
+lineNumber
