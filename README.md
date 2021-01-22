@@ -17,7 +17,16 @@ char lireCaractere()
 }
 
 dictionnaire de mot
+
+#define DICTIONNAIRE
+#ifdef DICO_THEME1
 dictionnaire = ("dictionnaire.txt" , r )
 if ( dictionnaire != NULL ) { }
 else { printf("erreur") }
+#ifdef DICO_THEME2
+dictionnaire = ("dictionnaire.txt" , r )
+if ( dictionnaire != NULL ) { }
+else { printf("erreur") }
+#endif
+
 lineNumber
