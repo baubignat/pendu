@@ -34,7 +34,7 @@ int main ()
 	fclose(dico);
 	strtok(mot,"\n");
 	printf("Bienvenue au jeu du pendu !\n");
-	int playCount=0;
+	int playCount=10;
 	char* motJoueur = 0 ;
 	int size = strlen(mot);
 	motJoueur = malloc(size*sizeof(char));
@@ -52,9 +52,10 @@ int main ()
 		motJoueur[i]='*';
 	}
 	/*char lettre=0;
-	while(playCount<10 || strcmp(mot,motJoueur)!=0)
+	while(playCount>0 || strcmp(mot,motJoueur)!=0)
 	{
 		printf("Mot à deviner : %s\n",motJoueur);
+		printf("Il vous reste %d essais.\n", playCount);
 		printf("Devinez une lettre : ");
 		lettre=lireCaractere();
 		int i=0;
@@ -65,8 +66,9 @@ int main ()
 				motJoueur[i]=lettre;
 			}
 		}
+		playCount-- ;
 	}
-	if(playCount==10)
+	if(playCount==0)
 	{
 		printf("Vous avez perdu :-(\n");
 	}
