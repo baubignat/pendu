@@ -1,6 +1,3 @@
-// RESTE A FAIRE
-// incorporer fonction lireCaractere
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -51,17 +48,16 @@ int main ()
 	{
 		motJoueur[i]='*';
 	}
-	/*char lettre=0;
 	while(playCount>0 || strcmp(mot,motJoueur)!=0)
 	{
 		printf("Mot à deviner : %s\n",motJoueur);
 		printf("Il vous reste %d essais.\n", playCount);
 		printf("Devinez une lettre : ");
-		lettre=lireCaractere();
+		char lettre=lireCaractere();
 		int i=0;
 		for(i=0;i<strlen(mot);i++)
 		{
-			if(mot[i]=lettre)
+			if(mot[i]==lettre)
 			{
 				motJoueur[i]=lettre;
 			}
@@ -75,7 +71,7 @@ int main ()
 	else if(strcmp(mot,motJoueur)==0)
 	{
 		printf("Vous avez gagné :-)\n");
-	}*/
+	}
 	free(motJoueur);
 	return 0;
 }
